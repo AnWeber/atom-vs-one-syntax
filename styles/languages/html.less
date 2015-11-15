@@ -1,0 +1,31 @@
+.text.html {
+  color: @mono-2;
+  .entity.tag,.definition.tag{
+    color: @hue-2;
+   &.block{
+     color: @hue-1;
+   }
+  }
+
+  .entity.attribute-name{
+    &.angular{
+      color: @hue-6-2!important;
+    }
+    color: @hue-5-2;
+  }
+
+  .quoted > .template.angular{
+    color:@hue-4-2;
+  }
+
+  .attribute.angular > .quoted > .template.angular{
+    color:@hue-6!important;
+  }
+
+  .meta.tag.template.angular{
+    > .punctuation{
+      color: @mono-1;
+    }
+    color: @mono-1;
+  }
+}
