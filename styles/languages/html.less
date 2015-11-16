@@ -1,31 +1,34 @@
 .text.html {
   color: @mono-2;
-  .entity.tag,.definition.tag{
+  .entity.tag,
+  .definition.tag {
     color: @hue-2;
-   &.block{
-     color: @hue-1;
-   }
+    &.block {
+      color: @hue-1;
+    }
   }
-
-  .entity.attribute-name{
-    &.angular{
-      color: @hue-6-2!important;
+  .entity.attribute-name {
+    &.angular {
+      color: @hue-5!important;
     }
     color: @hue-5-2;
   }
-
-  .quoted > .template.angular{
-    color:@hue-4-2;
+  .quoted > .template.angular {
+    color: @mono-2;
   }
-
-  .attribute.angular > .quoted > .template.angular{
-    color:@hue-6!important;
+  .meta.tag.template.angular {
+    > .punctuation {
+      color: @mono-2;
+    }
+    color: @mono-2;
   }
-
-  .meta.tag.template.angular{
-    > .punctuation{
+  .comment {
+    color: @hue-4;
+  }
+  .string.quoted {
+    color: @mono-1;
+    > .template.angular {
       color: @mono-1;
     }
-    color: @mono-1;
   }
 }
