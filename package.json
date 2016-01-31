@@ -1,7 +1,7 @@
 {
   "name": "atom-vs-one-syntax",
   "theme": "syntax",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "simple theme with base colors red,blue, green",
   "keywords": [
     "syntax",
