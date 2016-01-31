@@ -1,58 +1,56 @@
-.source.less {
-  
-  // highlight properties/values if they are supported
-  .attribute-name {
-    color: @hue-2;
-    &.support {
-      color: @mono-2;
-    }
-  }
-  
-  // highlight properties/values if they are supported
-  .property-name,
-  .property-value {
-    color: @hue-5;
-    &.support {
-      color: @mono-2;
-      &.constant {
-        color: @hue-5;
-      }
-    }
-  }
-  .keyword {
-    &.control {
-      &.at-rule {
-        color: @hue-3;
-      }
-      color: @hue-6-2;
-    }
-    &.operator {
-      color: @mono-1;
-    }
-    &.unit {
-      color: @hue-5;
-    }
-  }
-  .function {
-    color: @hue-1;
-  }
-  .constant,
-  .string {
-    color: @hue-5;
-  }
-  .variable {
-    color: @hue-3;
-  }
-  .pseudo-class,
-  .punctuation + .custom.elements {
-    color: @hue-6-2;
-  }
-  .variable {
-    color: @hue-4;
-  }
-  .property-list > .property-list {
-    > .property-value {
-      color: @mono-2;
-    }
-  }
+@import '../colors.less';
+
+.source.less{
+	// highlight properties/values if they are supported
+	.attribute-name{
+		&.mixin{
+			color: @hue-1;
+		}
+		color: @hue-2;
+		&.support{
+			color: @mono-1;
+		}
+	}
+
+	// highlight properties/values if they are supported
+	.property-name, .property-value{
+		color: @hue-5;
+		&.support{
+			color: @mono-1;
+			&.constant{
+				color: @hue-4-2;
+			}
+		}
+	}
+	.keyword{
+		&.control{
+			&.at-rule{
+				color: @hue-3;
+			}
+			color: @hue-3;
+		}
+		&.operator{
+			color: @mono-1;
+		}
+		&.unit{
+			color: @hue-4;
+		}
+	}
+	.function{
+		color: @hue-1;
+	}
+	.constant, .string{
+		color: @hue-4-2;
+	}
+	.pseudo-class, .punctuation + .custom.elements{
+		color: @hue-1;
+	}
+	.variable{
+		color: @hue-5-2;
+	}
+	.property-list > .property-list{
+		> .property-value{
+			color: @mono-1;
+		}
+	}
 }

@@ -1,33 +1,23 @@
-.source.json
-{
-    .meta.structure.dictionary.json
-    {
-        & > .string.quoted.json
-        {
-            color: @hue-1;
-            & > .punctuation.string
-            {
-                color: @mono-1;
-            }
-        }
-    }
-    .separator.pair
-    {
-        color: @mono-1;
-    }
+@import '../colors.less';
 
-    .meta.structure.dictionary.json,
-    .meta.structure.array.json
-    {
-        & > .value.json > .string.quoted.json,
-        & > .value.json > .string.quoted.json > .punctuation
-        {
-            color: @hue-5-2;
-        }
-
-        & > .constant
-        {
-            color: @hue-4;
-        }
-    }
+.source.json{
+	.dictionary, .array{
+		> .string.quoted{
+			color: @mono-1 !important;
+			.punctuation{
+				color: @mono-1 !important;
+			}
+		}
+	}
+	.value{
+		> .string.quoted{
+			color: @hue-4-2 !important;
+			.punctuation{
+				color: @hue-4-2 !important;
+			}
+		}
+		.constant{
+			color: @hue-5;
+		}
+	}
 }

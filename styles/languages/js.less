@@ -1,34 +1,96 @@
-.source.js {
-  .keyword{
-    color: @hue-2;
-  }
+@import '../colors.less';
 
-  .variable, .support.function{
-    color: @mono-1;
-  }
+.source.js{
+	.keyword{
+		&.control{
+			color: @hue-2;
+		}
+		&.operator{
+			&.logical, &.comparison{
+				color: @mono-2;
+				font-weight: bold;
+			}
+			&.in{
+				color: @hue-2;
+			}
+			&.new{
+				color: @hue-5;
+			}
+		}
+	}
 
-  .storage.type{
-    color: @hue-2;
-    & ~ .function.name{
-      color: @hue-6-2;
-    }
-  }
-  .constant{
-    color: @hue-4;
-  }
-  .delimiter.method + .constant{
-    color: @mono-1;
-  }
+	.type.arrow{
+		color: @mono-2;
+		font-weight: bold;;
+	}
 
-  .variable.language, .support.class,.console, .storage.modifier{
-    color: @hue-5;
-  }
 
-  .storage.type.arrow, .keyword.operator{
-    color: @hue-5;
-  }
-  .function> .function.name{
-      color: @mono-1;
-  }
+	.class{
+		.class{
+			color: @hue-1;
+		}
+		.name{
+			color: @hue-1;
+			font-weight: bold;
+		}
+		.instance{
+			color: @mono-1;
+			font-weight: normal;
+		}
+	}
+	.class{
+		color: @hue-5-2;
+	}
+	.type.var, .modifier{
+		color: @hue-5-2;
+	}
 
+	.comment, .jsdoc{
+		color: @mono-3;
+	}
+	.constant{
+		color: @mono-1;
+	}
+	.variable{
+		&.other{
+			color: @mono-1;
+		}
+		&.language{
+			color: @hue-5;
+		}
+		&.parameter{
+			color: @mono-2;
+		}
+	}
+	.function{
+		color: @mono-1;
+		.type.function{
+			color: @hue-2;
+		}
+		.name{
+			color: @hue-1;
+		}
+	}
+
+	.method{
+		.variable.parameter{
+			color: @hue-1;
+		}
+		.function{
+			color: @hue-1;
+			font-weight: bold;
+		}
+	}
+
+	.string{
+		color: @hue-4;
+	}
+
+	.embedded.source{
+		color: @hue-4-2;
+		.section{
+			color: @hue-4-2;
+			font-weight: bold;
+		}
+	}
 }
