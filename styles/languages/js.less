@@ -1,31 +1,51 @@
 @import '../colors.less';
 
 .source.js{
+	.jsdelimiter(){
+		color: @mono-3;
+		font-weight: bold;
+	}
 	.keyword{
+		.jsdelimiter();
 		&.control{
 			color: @hue-2;
+			font-weight: normal;
 		}
 		&.operator{
-			&.logical, &.comparison{
-				color: @mono-2;
-				font-weight: bold;
+			&.logical, &.comparison, &.assignment{
+				.jsdelimiter();
 			}
-			&.in{
+			&.in, &.typeof{
 				color: @hue-2;
+				font-weight: normal;
 			}
 			&.new{
 				color: @hue-5-2;
+				font-weight: normal;
 			}
 		}
 	}
 
-	.type.arrow{
-		color: @mono-2;
-		font-weight: bold;;
+	.type{
+		&.arrow{
+			.jsdelimiter();
+		}
+		&.name{
+			color: @mono-1;
+		}
+	}
+	.delimiter{
+		&.method, &.property{
+			color: @hue-5-2;
+			font-weight: bolder;
+		}
+	}
+	.terminator.statement{
+		.jsdelimiter();
 	}
 
-
-	.class{
+	.class.js{
+		background-color: lighten(@hue-1, 60%);
 		.class{
 			color: @hue-1;
 		}
@@ -50,6 +70,10 @@
 	}
 	.constant{
 		color: @mono-1;
+		&.numeric{
+			color: @hue-4;
+			font-weight: bold;
+		}
 	}
 	.variable{
 		&.other{
@@ -60,6 +84,7 @@
 		}
 		&.parameter{
 			color: @mono-2;
+			font-weight: bold;
 		}
 	}
 	.console.object{
@@ -74,7 +99,12 @@
 		.name{
 			color: @hue-1;
 		}
+		&.constructor{
+			color: @hue-1;
+			font-weight: bold;
+		}
 	}
+
 
 	.method{
 		.variable.parameter{
