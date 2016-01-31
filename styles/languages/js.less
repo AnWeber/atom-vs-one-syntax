@@ -14,7 +14,7 @@
 				color: @hue-2;
 			}
 			&.new{
-				color: @hue-5;
+				color: @hue-5-2;
 			}
 		}
 	}
@@ -46,7 +46,7 @@
 	}
 
 	.comment, .jsdoc{
-		color: @mono-3;
+		color: @hue-6;
 	}
 	.constant{
 		color: @mono-1;
@@ -56,11 +56,15 @@
 			color: @mono-1;
 		}
 		&.language{
-			color: @hue-5;
+			color: @hue-5-2;
 		}
 		&.parameter{
 			color: @mono-2;
 		}
+	}
+	.console.object{
+		color: @hue-3;
+		font-weight: bold;
 	}
 	.function{
 		color: @mono-1;
